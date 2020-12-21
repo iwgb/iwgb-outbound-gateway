@@ -56,7 +56,7 @@ try {
 } catch (HttpCompatibleException $e) {
     Response\json(
         ['error' => $e->getMessage()],
-        $e->getHttpStatus(),
+        $e->getCode(),
     );
 } catch (Exception $e) {
     Response\json(
